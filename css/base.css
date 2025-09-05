@@ -1,0 +1,59 @@
+.advent-pro {
+  font-family: "Advent Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.castoro-titling-regular {
+  font-family: "Castoro Titling", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.libre-caslon-text-regular {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.libre-caslon-text-bold {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.libre-caslon-text-regular-italic {
+  font-family: "Libre Caslon Text", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+.content_titel {
+  font-family: "Castoro Titling", serif;
+  font-size: 64px;
+  color: #212027;
+  margin: 73px 0 50px;
+}
+.content_titel span {
+  position: relative;
+  z-index: 1;
+}
+.content_titel span::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: var(--underline-width, 0%);
+  bottom: -5px;
+  right: -20px;
+  height: 30px;
+  background-color: #F88379;
+  transition: width 0.3s ease-out;
+}
+body {
+  height: 3000px;
+  transition: background-color 0.2s ease-in-out;
+  overflow-x: hidden;
+}
+.big_margin {
+  padding-bottom: 15px;
+}

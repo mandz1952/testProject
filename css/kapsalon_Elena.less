@@ -1,0 +1,1075 @@
+:root {
+    --black: #212027;
+  }
+
+
+  
+header{
+    margin-bottom: 276px;
+
+    .top_bar{
+        
+        margin-bottom: 21px ;
+        margin-top: 21px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .logo{
+            
+
+            font-family: libre-caslon-text-regular;
+            max-width: 206px;
+            font-size: 32px;
+            line-height: 30px;
+            color: 1E1E1E;
+            text-transform: uppercase;
+
+        }
+
+        .nav{
+            display: flex;
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-transform: uppercase;
+
+            li{
+                & + li{margin-left: 35px;}
+            }
+
+            a{
+                color: 1E1E1E;
+                display: inline-block;
+                position: relative;
+                // &:hover{text-decoration: underline rgb(248, 131, 121) 2px;
+                //     text-underline-offset: 4px;}
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: -2px;
+                    left: 0;
+                    background-color: #F88379;
+                    transition: transform 0.25s ease;
+                    transform-origin: bottom left;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+
+        }
+
+        .social{
+            a{
+                &+a{margin-left: 15px;}
+            }
+            margin-left: 127px;
+        }
+
+    }
+
+    .header-img{
+        position: relative;
+        .slider-one{
+            position: relative;
+            max-width: 100%;
+            height: 897px;
+            overflow: hidden;
+            .slider-wrap{
+                display: flex;
+                height: 100%;
+                .slide{
+                    min-width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        background-position: center;
+                    }
+                }
+            }
+        }
+        .contact-wrap{
+            position: absolute;
+            z-index: 1;
+            bottom: 75px;
+            left: 75px;
+            background-color: #FFFFFF;
+            width: 444px;
+            height: 198px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 18px;
+
+            .description{
+                font-family: "Advent Pro", serif;
+                border: #212027 solid 1px;
+                padding: 6px 10px;
+                font-weight: 600;
+                font-size: 32px;
+                border-radius: 3px;
+                text-transform: uppercase;
+                -webkit-transition: background 1s; 
+                transition: background 0.2s;
+                &:hover{
+                    background-color: #F88379;
+                }
+            }
+            .number{
+                display: flex;
+                align-items: center;
+                font-family: Arial;
+                font-weight: Bold;
+                font-size: 24px;
+                gap: 5px;
+                color: #F88379;
+                
+            }
+        }
+    }
+
+}
+
+.about_me{
+    
+    display: flex;
+    border: 2px solid #212027;
+    border-right: none;
+    border-radius: 85px 0 0 85px;
+    margin-left: 80px;
+    margin-bottom: 225px;
+    img{
+        position: relative;
+        bottom: 51px;
+        left: 95px;
+        margin-right: 186px;
+    }
+    .about_content{
+        .describion{
+            width: 491px;
+            font-family: "Advent Pro", serif;
+            font-size: 20px;
+            color: var(--black);
+        }
+    }
+}
+
+.my_work{
+    padding-top: 225px;
+    // background-color: #212027;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-evenly;
+    display: grid;
+    grid-template-areas: 
+    'content_one content_three'
+    'content_two content_three' 
+    ;
+    grid-template-rows: 250px 115px;
+    height: 852px;
+    min-width: 100%;
+    align-items: center;
+    
+    .content{
+        
+        grid-area: content_one;
+        .content_titel{
+            text-align: center;
+            color: #eaeaea;
+            margin-bottom: 60px;
+        }
+    
+    }
+    .content_buttons{
+        align-items: center;
+        grid-area: content_two;
+        display: flex;
+        flex-direction: column;
+        a{
+            font-family: "Advent Pro", serif;
+            font-size: 32px;
+            line-height: 44px;
+            color: #eaeaea;
+            border: 1px solid #eaeaea;
+            text-align: center;
+            border-radius: 3px;
+            width: 211px;
+            height: 46px;
+            &+a{margin-top: 30px;}
+            text-transform: uppercase;
+            -webkit-transition: background 1s; 
+            transition: background 0.2s;
+                &:hover{
+                    background-color: #F88379;
+                }
+        }
+    }
+
+    .slider_two{
+        padding-left: 160px;
+        grid-area: content_three;
+        width: 700px;
+        height: 800px;
+        overflow: hidden;
+        .slider-wrap{
+            position: relative;
+            .slider-item{
+                padding: 0px 50px 80px;
+                
+                // img{
+                //     width: 100%;
+                //     height: 100%;
+                // }
+            }
+        }
+    }
+}
+
+.revieuws{
+    // .app-wrapper {
+    //     position: relative;
+    //   }
+      
+    //   .app1 {
+    //     position: absolute;
+    //     bottom: 250px;
+    //     left: 165vw;
+    //     z-index: 2;
+    //   }
+      
+    //   .app2 {
+    //     position: absolute;
+    //     bottom: 10px;
+    //     right: 164vw;
+    //     z-index: 2;
+    //   }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content_titel{
+        margin-top: 225px;
+        margin-bottom: 130px;
+    }
+    .review_slider{
+        .app_wrapper {
+            position: relative;
+            
+            .app_2  {
+                position: absolute;
+                z-index: 2;
+                bottom: 250px;
+                left: 170.5vw;
+                
+                
+            }
+            .app_1{
+                position: absolute;
+                z-index: 2;
+                
+                bottom: 10px;
+                right: 170.5vw;
+                
+            }
+        }
+        .slider_wrap{
+            // position: relative;
+            display: flex;
+            gap: 50px;
+            margin-bottom: 24px;
+            
+            // .appostrof::before{
+            //     position: block;
+            //     top: 0px;
+            //     left: 0px;
+            //     content: '';
+            //     background-image: url(../img/icon/appostrof_1.svg);
+            //     width: 65px;
+            //     height: 100px;
+            //     background-size: contain;
+            //     background-repeat: no-repeat;
+            // }
+            // .appostrof::after{
+            //     position: sticky;
+            //     display: inline-block;
+            //     bottom: 0px;
+            //     right: 0px;
+            //     content: '';
+            //     background-image: url(../img/icon/appostrof_2.svg);
+            //     width: 65px;
+            //     height: 100px;
+            //     background-size: contain;
+            //     background-repeat: no-repeat;
+            // }
+            .slide{
+                border: 2px solid #212027;
+                width: 570px;
+                height: 300px;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 32px 66px;
+                p{
+                    font-family: "Advent Pro", serif;
+                    font-size: 24px;
+                    text-align: center;
+                }
+            }
+            
+        }
+    }
+}
+
+// .cost_works{
+//     .price_wrap{
+//         .price_item{
+//             p{
+//                 font-family: "Advent Pro", serif;
+//                 font-size: 24px;
+//                 font-weight: 500;
+//             }
+//             .price{
+                
+//                 table{
+//                     font-family: "Advent Pro", serif;
+//                     font-size: 24px;
+//                 }
+//             }
+            
+//         }
+//     }
+// }
+
+.cost_works {
+    
+    margin-top: 300px;
+    margin-bottom: 355px;
+    .content_titel {
+      text-align: center;
+      margin-top: 225px;
+      margin-bottom: 130px;
+      width: 99%;
+    }
+  
+    .price_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 200px;
+      
+        
+  
+      .price_item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        
+        
+        img {
+          position: relative;
+          
+  
+        }
+  
+        .price {
+            gap: 10xp;
+          max-width: 850px;
+          min-width: 300px;
+          margin-left: 50px;
+          table {
+            font-family: "Advent Pro", serif;
+            font-size: 24px;
+            
+            .price_phone_change{
+                display: none;
+            }
+            caption {
+              text-align: left;
+              font-weight: 700;
+            }
+            
+            td {
+            //   white-space: nowrap;
+            }
+  
+            td + td {
+                white-space: nowrap;
+              padding-left: 100px;
+            }
+          }
+          .last{
+            // img{
+            //     position: relative;
+            //     right: -100000px;
+                
+            // }
+            .last-table {
+                td + td {
+                  padding-left: 30px;
+                }
+                
+              }
+          }
+          
+        }
+      }
+  
+      .price_item:nth-child(even) {
+        flex-direction: row-reverse;
+        .price {
+            margin-right: 723px;
+           
+            
+            
+        }
+        
+        img {
+            // overflow: hidden;
+          position: absolute;
+        //   left: 1000px;
+          
+        }
+        
+      }
+      .price_item:last-child{
+        img{
+            transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+.reserveer{
+    
+    margin-top: 225px;
+    .container{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .reserveer-short-info{
+            .content_titel{
+                margin: 73px 0 15px;
+            }
+            p{
+                position: relative;
+                width: 390px;
+                text-align: center;
+                font-family: "Advent Pro", serif;
+                margin: 0 auto 77px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+        
+        .reserveer_information{
+            width: 1052px;
+            display: flex;
+            justify-content: space-between;
+            .reserveer_info{
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                .geo{
+                    max-width: 268px;
+                }
+                .info{
+                    color: #F88379;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    font-size: 24px;
+                    
+                    a{
+                        text-decoration: none;
+                        color: #F88379;
+                    }
+                    p{
+                        margin-top: 22.47px;
+                    }
+                }
+            }
+            .map_location{
+                display: block;
+                p{
+                    font-family: "Advent Pro", serif;
+                    margin-top: 8px;
+                }
+            };
+            
+            
+        }
+    }
+    
+}
+
+.werkuren{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 35px;
+    
+    .content_titel{
+        margin-top: 225px;
+    }
+    .uren{
+        border: #212027 solid 1px;
+        border-radius: 3px;
+        margin-top: 133px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+        p{
+            white-space: nowrap;
+            margin: 60px 0px;
+            max-width: 339px;
+            font-family: "Advent Pro", serif;
+            font-size: 36px;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+}
+
+.footer{
+    margin-top: 225px;
+    height: 447px;
+    background-color: #212027;
+    color: #D9D9D9;
+    font-size: 24px;
+    font-family: "Advent Pro", serif;
+    display: flex;
+    align-items: center;
+    .footer-box{
+        // margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .footer-text{
+            // margin-right: 433px;
+
+            .BTW{
+                font-family: "Advent Pro", serif;
+                font-weight: 100;
+            }
+        }
+        .footer-navigation{
+            display: flex;
+            flex-direction: column;
+            height: 206.5px;
+            justify-content: space-between;
+            .footer-nav{
+                nav{
+                    //display: flex;
+                    ul{
+                        
+                        display: flex;
+                        
+                        li{
+                            & + li{margin-left: 35px;}
+                        }
+                        
+                    }
+                    a{
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+                        font-weight: 400;
+                        //display: inline-block;
+                        position: relative;
+                        color: #eaeaea;
+                        text-transform: uppercase;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            bottom: -2px;
+                            left: 0;
+                            background-color: #F88379;
+                            transition: transform 0.25s ease;
+                            transform-origin: bottom left;
+                        }
+                        &:hover::after{
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
+                    }
+    
+                }
+            }
+            .social{
+                display: flex;
+                justify-content: right;
+                a{
+                    &+a{margin-left: 15px;}
+                }
+                
+            }
+
+        }
+    }
+    
+}
+.menu_phone{
+    display: none;
+    div{
+        width: 32px;
+        background-color: #212027;
+        height: 2.2px;
+        & + div{margin-top: 5px;}
+        border-radius: 3px;
+
+    }
+}
+
+
+.menu_phone_in{
+    
+    background-color: #212027;
+    width: 100%;
+    height: 580px;
+    border-radius: 0 0 70px 70px;
+    position: fixed;
+    top: -580px;
+    transition: top 0.5s ease ;
+
+    
+    .button_exet{
+        color: whitesmoke;
+        transform: scale(3);
+        margin: 36px 0 0 36px;
+        
+    }
+    .nav_phone{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        li{
+            margin-top: 171px;
+            & + li{margin-top: 42px;}
+        }
+        a{
+            position: relative;
+            font-size: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            color: #D9D9D9;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: #F88379;
+                transition: transform 0.25s ease;
+                transform-origin: bottom left;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+            
+        }
+    }
+
+    div{
+        width: 28px;
+        height: 3px;
+        background-color: #212027;
+        & + div{margin-top: 5px;}
+        border-radius: 3px;
+    }
+}
+
+.active_phone_in{
+    top: 0;
+
+}
+
+
+@media screen and (max-width:790px) {
+    header{
+        .top_bar{
+            display: flex;
+            justify-content: space-around;
+            .logo{
+                max-width: none;
+                font-size: 24px;
+            }
+            .nav{
+                display: none;
+            }
+            .social{
+                display: none;
+            }
+            .menu_phone{
+                display: block;
+            }
+        }
+        .header-img{
+            .contact-wrap{
+                display: none;
+            }
+        }
+    }
+
+    .menu_phone_in{
+        
+        z-index: 2;
+        position: absolute;
+        nav{
+            .nav_phone{
+                li{
+                    a{display: inline-block;}
+                }
+            }
+        }
+    }
+
+    .about_me{
+        margin-left: 22px;
+        margin-bottom: 225px;
+        flex-direction: column;
+        img{
+            position: relative;
+            bottom: 127px;
+            right: auto;
+            position: right;
+            margin-right: 186px;
+            width: 309px;
+        }
+        .content_titel{
+            margin-top: 0px;
+            margin-left: 27px;
+            font-size: 48px;
+        }
+        .about_content{
+            .describion{
+                margin-left: 62px;
+                margin-bottom: 96px;
+                width: 274px;
+            }
+        }
+    }
+    
+    .my_work{
+        padding: 0px 0px;
+        justify-content: center;
+        height: 100%;
+        min-width: 100%;
+        background-color: #212027;
+        grid-template-areas: 
+        'content_one'
+        'content_three'
+        'content_two'
+        ;
+        grid-template-rows: 1fr 2fr 0.1fr;
+        
+        align-items: center;
+        .content{
+           display: flex;
+           justify-content: center;
+            
+            .content_titel{
+                
+                width: 256px;
+                margin: 0px;
+                text-align: center;
+
+            }
+
+        }
+
+        .slider_two{
+            padding-left: 0px;
+            width: 550px;
+            height: 63%;
+            overflow: hidden;
+            .slider-wrap{
+                
+                position: relative;
+                display: flex;
+               
+               
+                .slider-item{
+                    display: flex;
+                    justify-content: center;
+                    padding: 0px 0px 0px;
+                    flex: 0 0 100%;
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        
+                    }
+                }
+            }
+        }
+    }
+    .revieuws{
+        .content_titel{
+            font-size: 48px;
+            
+            text-align: center;
+        }
+        .review_slider{
+            .slider_wrap{
+                gap: 14px;
+                
+                .slide{
+                 
+                    width: 323px;
+                    height: 411px;
+                    padding: 32px 17px;
+                }
+                
+            }
+        }
+    }
+    .cost_works {
+        .content_titel {
+          font-size: 48px;
+          text-align: center;
+        }
+      
+        .price_wrap {
+          gap: 200px;
+          .price_item {
+            position: sticky;
+            display: inline-block;
+            flex-direction: column;
+            align-items: center;
+            
+            
+            img {
+              width: 100%;
+              position: sticky;
+            }
+      
+            .price {
+              max-width: 850px;
+              min-width: 300px;
+              margin-left: 35px;
+              margin-right: 35px
+              ;
+              table {
+                width: 100%;
+                font-family: "Advent Pro", serif;
+                font-size: 24px;
+                .price_mac_change{
+                    display: none;
+                }
+                .price_phone_change{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                
+                caption {
+                  text-align: left;
+                  font-weight: 700;
+                }
+                tr :last-child{
+                    
+                    color: #F88379;
+                    white-space: nowrap;
+                    
+                }
+                tr{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                td {
+                //   white-space: nowrap;
+                }
+      
+                td + td {
+                //   padding-left: 0px;
+                }
+              }
+              .last{
+                // img{
+                //     position: relative;
+                //     right: -100000px;
+                    
+                // }
+                .last-table {
+                    td + td {
+                    //   padding-left: 0px;
+                    }
+                    
+                  }
+              }
+              
+            }
+          }
+      
+          .price_item:nth-child(even) {
+            flex-direction: column;
+            .price{
+                margin-right: 35px;
+            }
+            
+            img {
+                // overflow: hidden;
+              position: sticky;
+            //   left: 1000px;
+            
+              transform: scale(1);
+            }
+          }
+        }
+    }
+    .reserveer{
+        .container{
+            
+            .reserveer-short-info{
+                
+                .content_titel{
+                    font-size: 48px;
+                    margin: 73px 0 15px;
+                    text-align: center;
+                }
+                p{
+ 
+                }
+            }
+            
+            
+            .reserveer_information{
+                width: 315px;
+                height: 450.07px;
+                .reserveer_info{
+
+                    .info{
+
+                        
+                    }
+                }
+                .map_location{
+                    display: none;
+                };
+                
+                
+            }
+        }
+        
+    }
+    .werkuren{
+        .content_titel{
+            font-size: 48px;
+        }
+
+        .uren{
+            margin-top: 63px;
+            border: #212027 solid 1px;
+            border-radius: 3px;
+            
+            p{
+                margin: 120px 25px;
+                max-width: 339px;
+                font-family: "Advent Pro", serif;
+                font-size: 36px;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+    .footer{
+        padding: 52px 33px 52px 33px;
+        .footer-box{
+            
+            height: 100%;
+            align-items: end;
+            .footer-text{
+                height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+                .BTW{
+                    font-family: "Advent Pro", serif;
+                    font-weight: 100;
+                }
+            }
+            .footer-navigation{
+                display: flex;
+                flex-direction: column;
+                height: 206.5px;
+                justify-content: space-between;
+                .footer-nav{
+                    nav{
+                        display: none;
+                        //display: flex;
+                        ul{
+                            
+                            display: flex;
+                            
+                            li{
+                                & + li{margin-left: 35px;}
+                            }
+                            
+                        }
+                        a{
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: 16px;
+                            font-weight: 400;
+                            //display: inline-block;
+                            position: relative;
+                            color: #eaeaea;
+                            text-transform: uppercase;
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                transform: scaleX(0);
+                                height: 2px;
+                                bottom: -2px;
+                                left: 0;
+                                background-color: #F88379;
+                                transition: transform 0.25s ease;
+                                transform-origin: bottom left;
+                            }
+                            &:hover::after{
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
+        
+                    }
+                }
+                .social{
+                    display: flex;
+                    justify-content: right;
+                    a{
+                        &+a{margin-left: 15px;}
+                    }
+                    
+                }
+    
+            }
+        }
+        
+    }
+    
+}
+
+// @media screen and (max-width:)
+
